@@ -1,0 +1,31 @@
+Analytics
+
+	Data Warehouse - Conceitos básicos - Está em qualquer conversa
+	Extração de dados
+	Modelagem Multidimensional
+	Cargar full e incremental
+	DW - Montagem e manutenção
+	Projeto de Data Warehouse
+	
+	Livro - Kimball - The Data Warehouse Toolkit ...
+			
+	BI
+		Gera dados estáticos
+		Muitos dados transacionais
+		Ao final do dia consegue consolidar e dar informações
+		
+		Ao invés de mandar pessoas para estudar, pode coletar informações com o que temos, ligações etc.
+		E então já descobre
+		
+		Usamos dados para tomar decisões!
+		
+		Google Maps - Rota dele não vem do nada
+			Ele pega de estatística antigas e sabe qual é o melhor caminho, visando reduzir congestionamento, probabilidades, etc.
+			
+		Não tem NORMALIZAÇÃO
+			É um pensamento diferente, paradigma diferente
+	
+		Volumetria - Quanto de espaço é usado, quanto é usado pelo BI, quanto espaço o BI precisa para se organizar
+		
+	
+	
