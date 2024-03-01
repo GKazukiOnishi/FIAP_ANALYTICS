@@ -2,8 +2,8 @@
 
 ## Processo decisório
 Analisar o passado (informações históricas, experiências acumuladas)
-Bolar planos para executar e atingir objetivos
-**Tomada de Decisão**
+Bolar planos para executar e atingir objetivos  
+**Tomada de Decisão**  
 Gerar simulações  
 
 Dados = 80%  
