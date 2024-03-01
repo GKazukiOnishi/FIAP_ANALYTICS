@@ -84,3 +84,16 @@ Inteligência = Conhecimento = Informação + Análise = 5% (Tomada de decisão)
 16. Acesso a registros: Poucos - por transação x Muitos - para consolidação
 17. Índices: Poucos/simples x Muitos/complexos
 18. Função dos índices: Localizar um registro x Agilizar consultas
+
+![Imagem que descreve onde o BI entra no mundo](./img/img_bi_contexto.png)
+
+### Modelagem 3FN x Dimensional
+
+3FN  
+* Tabelas separadas e relacionadas
+* Sem repetição
+* Entidades distintas, difícil olhar uma tabela e extrair informação de negócio
+Dimensional  
+* Junta as tabelas de acordo com o assunto, com o interesse de análise
+* Agrupa fatos relevantes a um mesmo processo de negócio
+
