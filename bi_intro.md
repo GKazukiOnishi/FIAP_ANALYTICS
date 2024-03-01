@@ -4,11 +4,11 @@
 Analisar o passado (informações históricas, experiências acumuladas)
 Bolar planos para executar e atingir objetivos
 **Tomada de Decisão**
-Gerar simulações
+Gerar simulações  
 
-Dados = 80%
-Informação = Dado + Contexto = 15%
-Inteligência = Conhecimento = Informação + Análise = 5% (Tomada de decisão)
+Dados = 80%  
+Informação = Dado + Contexto = 15%  
+Inteligência = Conhecimento = Informação + Análise = 5% (Tomada de decisão)  
 
 ### Sistema Transacional x Suporte à decisão
 
