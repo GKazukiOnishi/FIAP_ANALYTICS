@@ -127,3 +127,25 @@ Data Warehouse é um conjunto de Data Marts integrados
 * Querem ver números que dê para entender rápido o que ele quer
 * Fácil de usar a informação
 * Reduz o custo de gerar e manusear uma informação. Para cada novo indicador você tem uma multiplicação na quantidade de combinações a serem analisadas
+
+## Mitos
+* Serve para dados agregados?
+* Poucos dados históricos?
+* Departamentais?
+* Não escalonáveis?
+* Só uso padronizado?
+* Não dá para integrar dados dimensionais?
+
+## Tendências para DW
+* Dados desestruturados (não só texto e números): Foto, áudio, vídeo, site etc.
+* Pesquisa: Permitir o uso do seu conteúdo em ferramentas de busca
+* SOA: BI exposto e cada aplicação cria uma interface como quiser
+* DW em tempo real: carga de informação direto
+* AI:
+    * Algoritmo K-means;
+    * Naive Bayes;
+    * Otimização;
+    * Grafos e detecção de comunidades;
+    * Regressão;
+    * Previsões;
+    * Detecção de outliers;
