@@ -58,4 +58,29 @@ Inteligência = Conhecimento = Informação + Análise = 5% (Tomada de decisão)
 3. Séries temporais
 - Armazena por um tempo superior ao usual comparado com os bancos transacionais
 
+![Diferença entre BD e DW de uma tabela preços](./img/img_bd_x_dw.png)
 
+4. Não volátil
+- Não são modificados que nem nos sistemas transacionais
+- São carregados apenas e acessados para leitura
+- Só alterados para correções, mas no geral não tem, quando maduro o sistema dificilmente acontece
+
+## Transacional x Dimensional
+1. Objetivo: Atividades cotidianas x Análise de negócio
+2. Uso: Operacional x Informativo
+3. Processamento: OLTP x OLAP
+4. Unidade de trabalho: CRUD x Carga e consulta
+5. Usuários: Operadores (muitos) x Gerência (poucos)
+6. Interação dos usuários: Ações pré-definidas x Pré-definida e ad-hoc (customização)
+7. Dados: Operacionais x Analíticos
+8. Volume: Pode ser alto (MB - GB) x Muito alto (GB - TB)
+9. Histórico: 60 a 90 dias x Vários anos
+10. Granularidade: Detalhada (baixa) x Detalhada e consolidada (alta)
+11. Redundância: Não ocorre (só p/eficiência) x Pode ocorrer
+12. Estrutura: Estática x Variável
+13. Manutenção: Mínima é o desejável x Constante
+14. Atualização: Contínua (tempo real) x Periódica (snapshots - retratos)
+15. Integridade: Transação x Cada atualização
+16. Acesso a registros: Poucos - por transação x Muitos - para consolidação
+17. Índices: Poucos/simples x Muitos/complexos
+18. Função dos índices: Localizar um registro x Agilizar consultas
