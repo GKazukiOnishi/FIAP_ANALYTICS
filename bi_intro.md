@@ -96,4 +96,34 @@ Inteligência = Conhecimento = Informação + Análise = 5% (Tomada de decisão)
 Dimensional  
 * Junta as tabelas de acordo com o assunto, com o interesse de análise
 * Agrupa fatos relevantes a um mesmo processo de negócio
+* Ver dados abstratos e extrair informação e conhecimento de forma tangível
 
+## Requisitos de um DW
+* Informações acessível
+* Consistência dos dados (sem update, precisa bater entre diferentes fontes)
+* Adaptável e flexível às várias fontes
+* Controle e segurança dos dados
+* Suporte à decisão
+
+## DW x Data Mart
+Data Mart tem o mesmo conceito de DW, diferenciando no conteúdo
+Data Warehouse é um conjunto de Data Marts integrados
+
+## Vocabulário
+* Medida - Info numérica
+* Tabela fato - Principal tabela que armazena as medidas (Surrogate key e medida)
+* Tabela dimensão - Informação descritivas e qualificadores do negócio. Entrada do DW (Surrogate key + descrições + negócio + medida consolidada ou não)
+* Grão - Menor nível de informação existente (Identificada pela Surrogate Key)
+* Surrogate Key - Chave substituta gerada no DW. PK das tabelas
+* Business Key - PK do transacional. Chave de negócio. Mais de uma surrogate key pode ter a mesma business key (forma de ter um histórico, mesma PK transacional com 2 surrogate indica um histórico de negócio que foi alterado).
+* Hierarquia - Atributos com ordem lógica do maior ao menor nível
+* Atributo - Campo descritivo de uma dimensão
+
+> Segredo do BI é entender o que as pessoas querem saber
+
+## Análise multidimensional
+* Gerentes pensam de forma multidimensional
+* BI formata de forma multidimensional
+* Querem ver números que dê para entender rápido o que ele quer
+* Fácil de usar a informação
+* Reduz o custo de gerar e manusear uma informação. Para cada novo indicador você tem uma multiplicação na quantidade de combinações a serem analisadas
