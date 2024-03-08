@@ -85,6 +85,44 @@ DW tem duas arquiteturas principais:
     * NDS é o repo principal, com todas os conjuntos de dados completos, históricos de transações e versões de master data
     * Diferente do DDS que não é o principal, porque não tem todos os dados de transações
     * NDS com versões históricas, sem update, um registro novo + versão antiga
+
+        ### NDS
+        Similar aos OLTP (Sistemas transacionais), com dois tipos de tabelas:
+        * Tabelas Transação - Com transação ou evento de negócio
+        * Tabelas Master - Pessoas ou objetos envolvidos no evento de negócio
+        > As tabelas fatos do DDS são carregadas a partir das tabelas de transação da NDS  
+        
+        > As tabelas dimensões do DDS são carregadas a partir das tabelas master da NDS  
+      
+    * ETL para carregar DDS mais simples
+    * Mais fácil de parametrizar e padronizar o ETL de acordo com os metadados da tabela
+    * NDS com as surrogate e natural keys
+
+    Vatangens:
+    * Facil de criar mais DDSs
+    * ETL mais parametriável e reutilizável
+    Desvantagens:
+    * Dá mais trabalho, complexo
+    * Modelo de dados maior
+    Quando usar:
+    * Quando precisa de vários DDS
+    * Quando é necessário integrar dados de forma normalizada
+
+    ### Arq. 3: ODS + DDS
+    * Assim como NDS + ODS, tem as tabelas transação e master
+    * O ODS é híbrido
+    * Aplicações podem ler dados do ODS, que podem rodar UPDATE etc.
+    * Sem atualizar dados das fontes, mas mexendo nos dados gerados pelo DW
+    * DDS como repositório principal, assim temos apenas um DDS
+    Vantages:
+    * Até terceira forma normal
+    * Atualizável por aplicações
+    Desvantagens:
+    * Precisa partir do DDS, porque ele é o principal, o ODS pode ter sido alterado
+    Quando usar:
+    * Quando se deseja o ODS para uso em outro sistema (uso mais difícil)
 2. Arquitetura do Sistema
     * Configuração física dos componentes
+    * Arranjo físico e conexões entre servidores, redes, softwares, storage e clientes
+    * Segurança, desempenho, SAN, RAID, backup, servidores
 
