@@ -131,4 +131,5 @@ DW tem duas arquiteturas principais:
 
     ![Exemplo de arquitetura de sistemas](./img/arq_sistemas.png)
 
-    Tempo passa e temos novas tecnologias, mas a base é a mesma
+    Tempo passa e temos novas tecnologias, mas a base é a mesma  
+    Amazon ainda como a grande do mercado na Cloud  
