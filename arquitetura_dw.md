@@ -60,7 +60,31 @@ DW tem duas arquiteturas principais:
     > Data Mart é um grupo de tabelas fatos relacionadas e suas tabelas dimensões correspondentes
       
     ![Exemplo de arquitetura DDS Simples](./img/Arq_1_ddl_simples.png)
-    
+      
+    Vantagens:
+    * Construção mais simples
+    * Dados carregados sem passar por uma etapa de normalização
+    * Mais simples e ETL mais rápido 
+    Desvatanges:
+    * Mais difícil de criar um segundo DDS
+    * DDS não costuma ser muito grande, mas tenta atender vários usos
+    * Não tem como reaproveitar os ETLs existentes (um para cada DDS)
+    Quando usar:
+    * Quando só precisa de um DDS
+    * Para soluções BI simples
+    * Bem aplicável quando se tem uma fonte de dados (sem necessidade de integração grande)
+
+    ### Arq. 2: NDS + DDS
+    * State + NDS + DDS
+    * Similar ao DDS Simples, mas tem o NDS
+    > NDS tem dois objetivos básicos: Integrar dados de várias fontes e permitir carregar dados em diversos DDS
+    * Permite vários DDS
+      
+    ![Exemplo de arquitetura NDS + DDS](./img/Arq_2_nds_dds.png)
+      
+    * NDS é o repo principal, com todas os conjuntos de dados completos, históricos de transações e versões de master data
+    * Diferente do DDS que não é o principal, porque não tem todos os dados de transações
+    * NDS com versões históricas, sem update, um registro novo + versão antiga
 2. Arquitetura do Sistema
     * Configuração física dos componentes
 
