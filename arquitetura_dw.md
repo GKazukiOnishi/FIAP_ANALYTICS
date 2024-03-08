@@ -114,6 +114,9 @@ DW tem duas arquiteturas principais:
     * Aplicações podem ler dados do ODS, que podem rodar UPDATE etc.
     * Sem atualizar dados das fontes, mas mexendo nos dados gerados pelo DW
     * DDS como repositório principal, assim temos apenas um DDS
+
+    ![Exemplo de arquitetura ODS + DDS](./img/Arq_3_ods_dds.png)
+
     Vantages:
     * Até terceira forma normal
     * Atualizável por aplicações
@@ -126,3 +129,6 @@ DW tem duas arquiteturas principais:
     * Arranjo físico e conexões entre servidores, redes, softwares, storage e clientes
     * Segurança, desempenho, SAN, RAID, backup, servidores
 
+    ![Exemplo de arquitetura de sistemas](./img/arq_sistemas.png)
+
+    Tempo passa e temos novas tecnologias, mas a base é a mesma
