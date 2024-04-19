@@ -54,4 +54,4 @@ Tende a ser pequena, mas que vai acontecer o tempo todo, de forma que tende a se
   
 Obs: Podemos trabalhar com médias diferentes de incremento por mês. Exemplo: Janeiro e Julho que é quando tem mais venda talvez. Mas perceba que se analisarmos no ano, vai dar na mesma.  
 Na maioria dos casos a média fixa acaba funcionando.  
-Podemos sair calculando caso a caso dos meses anteriores, para somar e ter o volume atual, mas na média vai dar quase na mesma.  
+Podemos sair calculando caso a caso dos meses anteriores, para somar e ter o volume atual, mas na média vai dar quase na mesma. Em um deles temos um valor de incremento médio que multiplicamos por período, no outro temos o cálculo exato do incremento em cada período para então somar no final.  
