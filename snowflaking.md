@@ -43,7 +43,8 @@ Dessa forma temos:
 2. SCD tipo 2 - Adiciona uma nova linha com a nova informação
 3. SCD tipo 3 - Mantém os valores antigos e adiciona uma nova coluna
   
-Para escolher um ou outro devemos pesar o armazenamento de dados por linha ou coluna, com a flexibilidade de construção de consultas para acesso ao dado.
+Para escolher um ou outro devemos pesar o armazenamento de dados por linha ou coluna, com a flexibilidade de construção de consultas para acesso ao dado.  
+Na prática quase nem tem dilema, não tem muitos motivos para não adicionar uma nova linha só.  
   
 # RCD
 ### Rapidly Changing Dimensions
