@@ -48,3 +48,10 @@ Na prática quase nem tem dilema, não tem muitos motivos para não adicionar um
   
 # RCD
 ### Rapidly Changing Dimensions
+Não é algo muito comum. Mas seriam mudanças que atualizam com muita frequência.  
+Como tratar?
+1. Jogar o atributo RCD e transformar em uma dimensão degenerada direto na Fato.
+Mas mesmo assim não tem tanta vantagem assim, porque um novo registro na dimensão não impactaria tanto quanto atualizações na fato.  
+Não existem muitos cenários em que fazem sentido uma dimensão mudar tanto na realidade.  
+  
+Uma escolha entre ter um novo dado na fato ou ter uma alteração na tabela de dimensão.  
