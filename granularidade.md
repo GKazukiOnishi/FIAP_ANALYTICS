@@ -18,6 +18,6 @@ Pensando em custos:
 Maior grão = Produto e Data  
 Menor grão = Produto, Data, Loja, Vendedor, Comprador e Promoção  
   
-Quanto Menor o grão - Maior detalhamento, flexibilidade, volume, velocidade (menos coisa para sumarizar)
-Quanto Maior o grão - Menor detalhamento, flexibilidade, volume, velocidade (mais coisa para sumarizar)  
+Quanto Menor o grão - Maior detalhamento, flexibilidade, volume - Menos velocidade (menos coisa para sumarizar)
+Quanto Maior o grão - Menor detalhamento, flexibilidade, volume - Mais velocidade (mais coisa para sumarizar)  
   
