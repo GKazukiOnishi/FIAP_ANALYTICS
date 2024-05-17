@@ -24,16 +24,19 @@ A maior parte das fatos costumam terem menos de 15 dimensões, sendo elas sufici
 Nesse cenário é interessante comparar se a quantidade de chaves estrangeiras de dimensões na fato compensam a diversidade de dimensões que surgiriam, se isso é realmente necessário.  
 Se ter mais chaves estrangeiras na fato compensa para ter aquelas novas dimensões e poder analisar aqueles novos dados direto na fato.
 
-# SCD
+# SCD = Esecidi
 ### Slowly Changing Dimension
 Uma técnica usada para armazenar os valores históricos de atributos de uma dimensão.  
 Temos duas opções quando algum dado de dimensão muda, podemos sobrescrever os antigos ou preservar os antigos.  
   
 Para presentar, temos dois métodos:
 1. Armazená-los como linhas
-    Nesse caso apenas inserimos um novo registro com um indicador de que é o mais atual, ou ativo.
+    Nesse caso apenas inserimos um novo registro com um indicador de que é o mais atual, ou ativo (ou pegar o registro de último ID).  
+    Com isso se torna possível comparar ganhos após a alteração, por exemplo.  
+    Vai ocupar mais espaço? É tãoo pouco comparado à fato, que nem faz diferença.  
 2. Armazená-los como colunas
-    Nesse caso adicionamos uma coluna para representar a nova informação, fazendo o mesmo para cada nova atualização.
+    Nesse caso adicionamos uma coluna para representar a nova informação, fazendo o mesmo para cada nova atualização.  
+    Nisso acabam surgindo várias colunas que complicam na montagem de select e quando surge a necessidade de uma nova atualização.  
   
 Dessa forma temos:
 1. SCD tipo 1 - Sobrescreve os valores antigos
