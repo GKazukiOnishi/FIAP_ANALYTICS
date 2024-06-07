@@ -35,10 +35,13 @@ Table FATO {
   id_localizacao int [primary key]
   id_responsavel int [primary key]
   id_tipo_lixo int [primary key]
+  quantidade int
 }
 
-// Ref: posts.user_id > users.id // many-to-one
+Ref: "DATA"."id" < "FATO"."id_data"
 
-// Ref: users.id < follows.following_user_id
+Ref: "LOCALIZACAO"."id" < "FATO"."id_localizacao"
 
-// Ref: users.id < follows.followed_user_id
+Ref: "RESPONSAVEL"."id" < "FATO"."id_responsavel"
+
+Ref: "TIPO_LIXO"."id" < "FATO"."id_tipo_lixo"
