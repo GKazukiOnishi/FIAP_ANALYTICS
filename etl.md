@@ -153,4 +153,20 @@ Métodos para extrair:
     * **Tolerante a falhas**, porque você sabe dos cortes que deram certo. Qualquer coisa basta re-rodar que tudo bem
     * Mesmo que não tenha colunas de timestamp, podemos usar datas de transação, tomando cuidado para não perder dados usando datas antigas. Outra opção são campos sequenciais, nisso vamos indo conforme a numeração da sequencia (CEI e LCEI)
 * Intervalo fixo
+    * Extraimos um certo número de registros ou um período deles
+    * Por exemplo, os ultimos 6 meses, ou ultimas 100.000 linhas da tabela
 * Abordagem Push
+
+## Tabelas Relacionadas
+É importante lembrar que caso uma linha seja extraida e tenha relacionamento com outras, essas precisarao ser carregadas tambem.  
+Geralmente buscamos a primeira tabela e todos os dados relacionados de cada registro extraido.
+
+## Outras fontes
+As fontes nem sempre sao tabelas, podem ser:
+* XML
+* Flat Files (delimitados ou posicionadas)
+* Excel
+* Web Logs
+* Web Services
+* Filas dem ensagens
+* E-mails
