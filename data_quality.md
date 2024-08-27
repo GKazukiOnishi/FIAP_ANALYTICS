@@ -77,3 +77,7 @@ Abordagens:
 * Dados salvos em tabelas de auditoria (mesma estrutura do DW, mas tem como PK uma SK que está sendo relacionada na tabela DQ Log como FK)
 
 ### Auditoria
+* Consultas na tabelas de auditoria e log para encontrar as violacoes de regras, linhas impactadas, tabelas fonte, destino etc.  
+* Podemos descobrir com isso a qualidade dos dados do DW
+* Podemos avaliar por aqueles mais recentes, a quantidade de repeticoes da mesma violacao, impacto para o negocio etc.
+* Essas tabelas podem ser limpadas e arquivadas regularmente para nao ocupar espaco do DW
