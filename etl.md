@@ -45,6 +45,50 @@ Depende do servidor e da utilidade dele. É para Stage? É para o DW em si?
 * Máximo grau de paralelismo possível para usar todos os processadores
 * Desligar funcionalidades não utilizadas
 
+(Imagens de exemplo nos slides)
+
+### Particionamento
+Dois tipos:
+* Vertical: Divide uma tabela em várias menores, cada uma contendo algumas **colunas** da tabela original
+* Horizontal: Divide uma tabela em várias menores, cada uma contendo algumas **linhas** da tabela original
+
+<br>
+Em geral:
+
+* Usamos **Horizontal Partitioning**
+* Conteúdo é esperado para ser **cronológico**
+* Ao organizar fisicamente as tabelas por data, costuma levar a melhores performances, pois a maioria das consultas envolveriam a mesma partição.
+
+## Banco de dados em Cloud
+* Big Query - Google - Consultas de alto desempenho usando SQL
+* RedShift - AWS para alto desempenho usando SQL
+
+<br>
+
+Cada um tem os seus preços e políticas. Isso possibilita e facilita o cálculo dados os requisitos de cada projeto! (Exercícios no slide)
+
+<br>
+
+Com isso agora somos capazdes de esboçar arquitetura de hardware para DWs quaisquer!
+
+## Índices
+Podem melhorar significativamente o desemenho de um DW.
+
+### Nas dimensões
+A Surrogate Key (SK) é um exemplo, que inclusive costuma ser um clusterizado, permitindo definir a ordem física de armazenamento.
+<br>
+Podem ser usados também filtros comuns das outras colunas.
+
+### Nas fatos
+Definimos a PK da tabela conforme o negócio, permitindo indexar os dados pela PK (composta mesmo).  
+* Se indexarmos só por uma das colunas da PK, costuma ser 10x mais lento.
+* Não compensa indexar tabelas pequenas (porque costuma dar mais problemas na manutencao e não compensa o ganho de desempenho)
+* 1000 linhas para baixo não vale a pena
+* Vale a pena estudar planos de execuções das queries
+
+### Extras
+* Podemos indexar colunas após análises de tunning
+* Podemos indexar cada uma das SK da tabela Fato, conhecida como bitmapping (dessa vez sem clusterizar)
 
 # ETL - Projeto Físico
 
