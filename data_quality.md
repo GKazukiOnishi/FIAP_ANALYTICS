@@ -67,3 +67,13 @@ Abordagens:
 * Não trazer e buscar sempre que precisar, usando webservices por exemplo
 
 ## Regras de DQ
+* Cross-reference - Verificando dados usandos os próprios dados do DW
+* DW Internal Validation - Verificamos os dados já carregados para verificar se as agregações fazem sentido.
+
+### Logging
+**Data quality logging** - Os eventos de violação de DQ costumam ser logados, armazenando a hora, ação tomada, status da correção. Tudo no DQ log, o dado, a linha etc.
+
+* Dados salvos em Log
+* Dados salvos em tabelas de auditoria (mesma estrutura do DW, mas tem como PK uma SK que está sendo relacionada na tabela DQ Log como FK)
+
+### Auditoria
