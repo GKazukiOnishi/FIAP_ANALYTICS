@@ -1,11 +1,56 @@
+# Cálculos de tamanho, hardware - Projeto Físico
+Um dos maiores desafios é atender à performance e segurança desejada na implementação física do projeto, que costumam compor grande parte dos requisitos não funcionais.
+* Como deixar disponível 24/7?
+* Sem downtime maior que 1 hora por mês
+* Reprocessamentos possiveis
+* Tempo de acesso aos relatorios interior a 10 segundos
+
+### Importante
+* É preciso pensar em failover, em clusters para redundância
+* NLB - Network Load Balanced é uma opção para tratar os servidores idênticos
+* SAN - Storage Area Network com fibra óptica redundante pode ajudar
+* Memória, Processador de cada servidor precisa ser dimensionado e estudados
+
+<br>
+
+Mas como prever a complexidade necessária? Como calcular o tamanho necessário? Como prever o ETL/ELT, Stage, Regras, considerar índices, partições etc., quantidade de bases no mesmo servidor, considerar crescimento futuro? Como?
+
+<br>
+
+Isso é a complexidade dessa tarefa
+
+## Storage
+O calculo de storage pode ser feito considerando o tamanho de cada linha por tabela, assim como já fizemos, mas dessa vez podemos considerar margens de crescimento, incremento esperado, total calculado etc.
+<br>
+Depende do servidor e da utilidade dele. É para Stage? É para o DW em si?
+<br>
+
+### Cálculo
+(Tamanho da Linha) * 150% * (Incremento Diário) * (Total de dias previstos)
+
+<br>
+
+* É interessante considerar um total de 30% reservado para metadados e indices também!
+* Partições de arquivos de dados
+* RAID 5 para desempenho
+* Arquivo de Log em arquivo separado
+
+## Configurando Databases
+
+* Nomes curtos e claros
+* Collation (como serão ordenados os caracteres)
+* Case Sensitivity
+* Criação de filegroups
+* Tamanhos iniciais e de incremento bem calculados e previstos
+* Máximo grau de paralelismo possível para usar todos os processadores
+* Desligar funcionalidades não utilizadas
+
+
 # ETL - Projeto Físico
 
 ETL = **Extract, Transform and Load**
 * Processo de recuperar e transformar dados dos sistemas fontes
 * Podemos usar a ideia de ETL tanto para receber dados quanto para enviar.
-
-## Cálculos de tamanho, hardware
-Olhar slides
 
 ## Princípios
 * **Volume de dados enormes**, centezas de mega ou até dezenas de gigas
